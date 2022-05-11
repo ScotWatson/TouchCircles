@@ -5,8 +5,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 let width;
 let height;
-const myCanvas;
-const myCtx;
+let myCanvas;
+let myCtx;
 document.addEventListener("load", function () {
   myCanvas = document.createElement("div");
   document.body.appendChild(myCanvas);
