@@ -7,6 +7,7 @@ let width;
 let height;
 let myCanvas;
 let myCtx;
+document.body.style.backgroundColor = "black";
 document.addEventListener("load", function () {
   myCanvas = document.createElement("div");
   document.body.appendChild(myCanvas);
