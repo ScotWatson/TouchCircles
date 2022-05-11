@@ -10,6 +10,7 @@ let myCtx;
 window.addEventListener("load", function () {
   document.body.style.backgroundColor = "black";
   myCanvas = document.createElement("canvas");
+  myCanvas.style.border = "none";
   document.body.appendChild(myCanvas);
   myCtx = myCanvas.getContext("2d");
   myCtx.clearRect(0, 0, width, height);
