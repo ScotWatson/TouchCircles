@@ -44,6 +44,6 @@ function updateCanvas(evt) {
     myCtx.fillStyle = "rgb(" + force + ", " + force + ", " + force + ")";
     myCtx.beginPath();
     myCtx.ellipse(touch.clientX, touch.clientX, 50, 50, 0, 0, 2 * Math.PI);
-    myCtx.stroke();
+    myCtx.fill();
   }
 }
