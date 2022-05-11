@@ -13,7 +13,7 @@ document.addEventListener("load", function () {
   myCtx = myCanvas.getContext("2d");
 });
 
-window.addEvenetListener("resize", resize);
+window.addEventListener("resize", resize);
 
 myCanvas.addEventListener("touchstart", updateCanvas);
 myCanvas.addEventListener("touchmove", updateCanvas);
