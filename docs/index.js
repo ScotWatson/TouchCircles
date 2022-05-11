@@ -21,6 +21,7 @@ document.addEventListener("load", function () {
 });
 
 function resize() {
+  console.log("resize");
   width = window.innerWidth;
   height = window.innerHeight;
   myCanvas.width = width;
@@ -30,6 +31,7 @@ function resize() {
 }
 
 function updateCanvas(evt) {
+  console.log("updateCanvas");
   myCtx.clearRect(0, 0, width, height);
   for (let touch of evt.touches) {
     if (touch.force == 0) {
