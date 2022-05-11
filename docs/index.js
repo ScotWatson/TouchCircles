@@ -5,8 +5,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 let width;
 let height;
-const myCanvas = document.createElement("div");
-const myCtx = myCanvas.getContext("2d");
+const myCanvas;
+const myCtx;
+document.addEventListener("load", function () {
+  myCanvas = document.createElement("div");
+  document.body.appendChild(myCanvas);
+  myCtx = myCanvas.getContext("2d");
+});
 
 window.addEvenetListener("resize", resize);
 
