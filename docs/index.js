@@ -21,7 +21,6 @@ window.addEventListener("load", function () {
 });
 
 function resize() {
-  console.log("resize");
   width = window.innerWidth;
   height = window.innerHeight;
   myCanvas.width = width;
@@ -31,13 +30,16 @@ function resize() {
 }
 
 function updateCanvas(evt) {
-  console.log("updateCanvas");
   myCtx.clearRect(0, 0, width, height);
   for (let touch of evt.touches) {
-    if (touch.force == 0) {
-      force = 255;
+    if (touch.force) {
+      if (touch.force == 0) {
+        force = 255;
+      } else {
+        force = Math.floor(255 * touch.force);
+      }
     } else {
-      force = Math.floor(255 * touch.force);
+      force = 255;
     }
     myCtx.fillStyle = "rgb(" + force + ", " + force + ", " + force + ")";
     myCtx.beginPath();
