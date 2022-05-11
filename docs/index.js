@@ -11,6 +11,7 @@ document.addEventListener("load", function () {
   myCanvas = document.createElement("div");
   document.body.appendChild(myCanvas);
   myCtx = myCanvas.getContext("2d");
+  myCtx.clearRect(0, 0, width, height);
 });
 
 window.addEventListener("resize", resize);
@@ -28,7 +29,7 @@ function resize() {
   myCanvas.style.height = height + "px";
 }
 
-function updateCanvas() {
+function updateCanvas(evt) {
   myCtx.clearRect(0, 0, width, height);
   for (let touch of evt.touches) {
     if (touch.force == 0) {
