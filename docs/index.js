@@ -13,13 +13,12 @@ document.addEventListener("load", function () {
   document.body.appendChild(myCanvas);
   myCtx = myCanvas.getContext("2d");
   myCtx.clearRect(0, 0, width, height);
+  window.addEventListener("resize", resize);
+  myCanvas.addEventListener("touchstart", updateCanvas);
+  myCanvas.addEventListener("touchmove", updateCanvas);
+  myCanvas.addEventListener("touchend", updateCanvas);
+  resize();
 });
-
-window.addEventListener("resize", resize);
-
-myCanvas.addEventListener("touchstart", updateCanvas);
-myCanvas.addEventListener("touchmove", updateCanvas);
-myCanvas.addEventListener("touchend", updateCanvas);
 
 function resize() {
   width = window.innerWidth;
@@ -44,5 +43,3 @@ function updateCanvas(evt) {
     myCtx.stroke();
   }
 }
-
-resize();
